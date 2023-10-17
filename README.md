@@ -1,2 +1,3 @@
 # initProject
-³õÊ¼»¯Ò»¸öÏîÄ¿ĞèÒªµÄÅäÖÃ£¨store+sass+config+package+×ÔÊÊÓ¦£©
+åˆå§‹åŒ–ä¸€ä¸ªé¡¹ç›®éœ€è¦çš„é…ç½®ï¼ˆstore+sass+config+package+è‡ªé€‚åº”ï¼‰
+nodeç‰ˆæœ¬v16.14.0
