@@ -1,2 +1,2 @@
 # initProject
-åˆå§‹åŒ–ä¸€ä¸ªé¡¹ç›®éœ€è¦çš„é…ç½®ï¼ˆstore+sass+config+package+è‡ªé€‚åº”ï¼‰
+³õÊ¼»¯Ò»¸öÏîÄ¿ĞèÒªµÄÅäÖÃ£¨store+sass+config+package+×ÔÊÊÓ¦£©

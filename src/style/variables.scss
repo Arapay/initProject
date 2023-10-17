@@ -1,0 +1,23 @@
+:root {
+    --theme-color: #fff;
+    --theme-background: #eee;
+  }
+  .spring {
+    --theme-color: rgba(0, 145, 255, 1);
+    --theme-box-shadow: rgba(0, 145, 255, .15);
+    --theme-background: rgba(9, 26, 56, 1);
+    --theme-font-color: rgba(50, 197, 255, 1);
+  }
+  .summer {
+    --theme-color: #0F68CC;
+    --theme-background: pink;
+  }
+  .autumn {
+    --theme-color: #FA6300;
+    --theme-background: #333;
+  }
+  .winter {
+    --theme-color: #DF2021;
+    --theme-background: #eee;
+  }
+  
