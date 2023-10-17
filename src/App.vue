@@ -1,17 +1,44 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <router-view/>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script setup>
+import { debounce } from '@/utils'
+import { useAppStore } from '@/store/appStore'
+import { onMounted, onUnmounted } from 'vue'
+const APP_STORE = useAppStore()
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+document.body.className = 'spring'
+
+function getScale() {
+  const { width = 1920, height = 1080 } = APP_STORE.statedScreenSize
+  const ww = window.innerWidth / width
+  const wh = window.innerHeight / height
+  const obj = {
+    scale: ww < wh ? ww : wh,
+    screenSize: {
+      width: window.innerWidth,
+      height: window.innerHeight
+    }
   }
+  if (window.innerWidth / window.innerHeight < width / height) {
+    obj.scale = ww > wh ? ww : wh
+  }
+  return obj
 }
+function setScale() {
+  const { scale, screenSize } = getScale()
+  APP_STORE.setScale(scale)
+  APP_STORE.setScreenSize(screenSize)
+}
+onMounted(() => {
+  setScale()
+  window.addEventListener('resize', debounce(setScale, 100))
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', debounce(setScale, 100))
+})
 </script>
 
 <style>
